@@ -56,7 +56,7 @@ counter = 1;
 console.log(2 * ++counter); // 4
 
 counter = 1;
-console.log(2* counter++); // 2
+console.log(2 * counter++); // 2
 
 /*
 Bitwise operators:
@@ -68,3 +68,44 @@ Bitwise operators:
 - RIGHT SHIFT: >>
 - ZERO-FILL RIGHT SHIFT: >>>
 */
+
+/*
+Comparisons:
+- Greater/less than: a > b, a < b
+- Greater/less than or equals: a >= b, a <= b
+- Equals: a == b, a === b
+- Not equals: a != b
+*/
+
+let comparison = 5 > 4;
+console.log(comparison); // true
+
+comparison = "Z" > "A";
+console.log(comparison); // true
+
+comparison = "Glow" > "Glee";
+console.log(comparison); // true
+
+comparison = "4" == 4;
+console.log(comparison); // true
+
+comparison = "4" === 4;
+console.log(comparison); // true
+
+// FUNNY STUFF
+
+let funnyA = 0;
+console.log(Boolean(funnyA)); // false
+
+let funnyB = "0";
+console.log(Boolean(funnyB)); // true
+
+console.log(a == b); // true
+
+console.log(null > 0); // false
+console.log(null == 0); // false
+console.log(null >= 0); // true
+
+console.log(undefined > 0); // false
+console.log(undefined < 0); // false
+console.log(undefined == 0); // false
