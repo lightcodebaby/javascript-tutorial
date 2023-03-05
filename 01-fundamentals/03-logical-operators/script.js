@@ -55,3 +55,16 @@ if (1 && 0) {
 }
 
 console.log(!true); // false
+
+// Nullish coalescing operator
+
+let firstName = null;
+let lastName = null;
+let nickName = "Supercoder";
+
+console.log(firstName ?? lastName ?? nickName ?? "Anonymous"); // Supercoder
+
+let height = 0;
+
+console.log(height || 100); // 100
+console.log(height ?? 100); // 0
