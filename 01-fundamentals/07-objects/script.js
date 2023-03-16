@@ -292,3 +292,42 @@ console.log(user1?.[key]); // Ruben
 console.log(user2?.[key]); // Undefined
 
 delete user?.name;
+
+// Object to primitive
+
+user = {
+	name: "Ruben",
+	money: 1000,
+
+	[Symbol.toPrimitive](hint) {
+		console.log(`hint: ${hint}`);
+		return hint == "string" ? `{name: "${this.name}"}` : this.money;
+	}
+};
+
+console.log(user); // hint: string -> {name: "Ruben"}
+console.log(+user); // hint: number -> 1000
+console.log(user + 500); // hint: default -> 1500
+
+/*
+By default, objects have the following conversion methods:
+toString() -> [object Object]
+valueOf() -> the object itself
+*/
+
+user = {
+	name: "Ruben",
+	money: 1000,
+
+	toString() {
+		return `{name: "${this.name}"}`;
+	},
+
+	valueOf() {
+		return this.money
+	}
+};
+
+console.log(user); // toString -> {name: "Ruben"}
+console.log(+user); // valueOf -> 1000
+console.log(user + 500); // valueOf -> 1500
