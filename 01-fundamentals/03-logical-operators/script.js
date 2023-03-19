@@ -7,16 +7,16 @@ let letters = prompt("How many letters does the word Javascript have?");
 if (letters == 10) console.log("You are right!");
 
 if (letters == 10) {
-  console.log("That's correct!");
-  console.log("You're so smart!");
+    console.log("That's correct!");
+    console.log("You're so smart!");
 }
 
 if (0) {
-  console.log("0 is falsy");
+    console.log("0 is falsy");
 }
 
 if (1) {
-  console.log("1 is truthy");
+    console.log("1 is truthy");
 }
 
 let cond = letters == 10;
@@ -25,11 +25,11 @@ if (cond) {
 }
 
 if (letters < 10) {
-  console.log("Javascript has more letters!");
+    console.log("Javascript has more letters!");
 } else if (letters > 10) {
-  console.log("Javascript has less letters");
+    console.log("Javascript has less letters");
 } else {
-  console.log("Exactly!");
+    console.log("Exactly!");
 }
 
 let correct = letters == 10 ? true : false;
@@ -42,7 +42,7 @@ console.log(true || false); // true
 console.log(false || false); // false
 
 if (1 || 0) {
-  console.log("truthy!");
+    console.log("truthy!");
 }
 
 console.log(true || true); // true
@@ -51,7 +51,7 @@ console.log(true || false); // false
 console.log(false || false); // false
 
 if (1 && 0) {
-  console.log("this won't work, 0 is falsy!");
+    console.log("this won't work, 0 is falsy!");
 }
 
 console.log(!true); // false
