@@ -76,7 +76,7 @@ list.next.next = { value: 3 };
 list.next.next.next = { value: 4 };
 list.next.next.next.next = null;
 
-// Splitting into multiple parts and joining 
+// Splitting into multiple parts and joining
 
 let secondList = list.next.next;
 list.next.next = null;
@@ -85,7 +85,7 @@ list.next.next = secondList;
 
 // Prepending values
 
-list = {value: "new first item", next: list};
+list = { value: "new first item", next: list };
 
 // Removing values from the middle
 

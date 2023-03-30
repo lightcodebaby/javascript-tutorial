@@ -42,9 +42,9 @@ console.log("La".repeat(3)); // LaLaLa
 // Borrowing methods
 
 obj = {
-	0: "Hello",
-	1: "World!",
-	length: 2
+    0: "Hello",
+    1: "World!",
+    length: 2,
 };
 
 obj.join = Array.prototype.join;

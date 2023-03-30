@@ -76,7 +76,7 @@ user = new User("Ruben");
 console.log(user.name); // Ruben
 
 class User {
-	name = prompt("Name, please?", "Ruben");
+    name = prompt("Name, please?", "Ruben");
 }
 
 user = new User();
@@ -87,13 +87,13 @@ console.log(User.prototype.name); // undefined
 // Bounding methods with class fields
 
 class Button {
-	constructor(value) {
-		this.value = value;
-	}
+    constructor(value) {
+        this.value = value;
+    }
 
-	click() {
-		console.log(this.value);
-	}
+    click() {
+        console.log(this.value);
+    }
 }
 
 let button = new Button("Hello");
@@ -105,13 +105,13 @@ setTimeout(() => button.click(), 1000); // works
 // Another way to do the same
 
 class Button {
-	constructor(value) {
-		this.value = value;
-	}
+    constructor(value) {
+        this.value = value;
+    }
 
-	click = () => {
-		console.log(this.value);
-	}
+    click = () => {
+        console.log(this.value);
+    };
 }
 
 button = new Button("Hello");

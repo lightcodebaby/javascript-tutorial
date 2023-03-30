@@ -69,18 +69,21 @@ console.log(triple(4));
 // Binding only arguments and not context
 
 function partial(func, ...argsBound) {
-	return function() {
-		return func.call(this, ...argsBound, ...args);
-	}
+    return function () {
+        return func.call(this, ...argsBound, ...args);
+    };
 }
 
 user = {
-	firstName: "Ruben",
-	say(time, phrase) {
-		console.log(`[${time}] ${this.firstName}: ${phrase}`);
-	}
+    firstName: "Ruben",
+    say(time, phrase) {
+        console.log(`[${time}] ${this.firstName}: ${phrase}`);
+    },
 };
 
-user.sayNow = partial(user.say, new Date().getHours() + ":" + new Date().getMinutes);
+user.sayNow = partial(
+    user.say,
+    new Date().getHours() + ":" + new Date().getMinutes
+);
 
 user.sayNow("Hello"); // [10:00] Ruben: Hello

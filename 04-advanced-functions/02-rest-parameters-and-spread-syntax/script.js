@@ -57,4 +57,4 @@ let obj = {
     c: 3,
 };
 
-let objCopy = {...obj};
+let objCopy = { ...obj };

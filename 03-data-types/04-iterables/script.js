@@ -69,17 +69,17 @@ while (true) {
 // Iterable but no array-like
 
 range = {
-	from: 1,
-	to: 10,
-}
+    from: 1,
+    to: 10,
+};
 
 // Array-like but no iterable
 
 let arrayLike = {
-	0: "Hello",
-	1: "World",
-	length: 2,
-}
+    0: "Hello",
+    1: "World",
+    length: 2,
+};
 
 // Array.from
 
@@ -87,11 +87,10 @@ let arr = Array.from(arrayLike);
 
 console.log(arr); // Hello, world
 
-arr = Array.from(range, num => num * num);
+arr = Array.from(range, (num) => num * num);
 
 console.log(arr); // 1, 4, 9, 16, 25, 36, 49, 64, 81, 100
 
 str = "Ruben";
 
 let chars = Array.from(str);
-

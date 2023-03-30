@@ -125,8 +125,8 @@ bench(diffSubstract);
 bench(diffGetTime);
 
 for (let i = 0; i < 10; i++) {
-	time1 += bench(diffSubstract);
-	time2 += bench(diffGetTime);
+    time1 += bench(diffSubstract);
+    time2 += bench(diffGetTime);
 }
 
 console.log(`Total time for diffSubstract: ` + time1);
@@ -134,7 +134,7 @@ console.log(`Total time for diffGetTime: ` + time2);
 
 // parsing dates from strings
 
-date = new Date(Date.parse("1994-08-11T15:30:00.000+01:00")); 
+date = new Date(Date.parse("1994-08-11T15:30:00.000+01:00"));
 /*
 
 the format is YYYY-MM-DDTHH:mm:ss.sssZ where:

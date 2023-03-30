@@ -270,10 +270,10 @@ console.log(user?.address?.street);
 let html = document.querySelector(".elem")?.innerHTML;
 
 let userAdmin = {
-	admin() {
-		console.log("I am admin");
-	}
-}
+    admin() {
+        console.log("I am admin");
+    },
+};
 
 let userGuest = {};
 
@@ -283,7 +283,7 @@ userGuest.admin?.(); // Nothing happens
 key = "firstName";
 
 let user1 = {
-	firstName: "Ruben"
+    firstName: "Ruben",
 };
 
 user2 = null;
@@ -296,13 +296,13 @@ delete user?.name;
 // Object to primitive
 
 user = {
-	name: "Ruben",
-	money: 1000,
+    name: "Ruben",
+    money: 1000,
 
-	[Symbol.toPrimitive](hint) {
-		console.log(`hint: ${hint}`);
-		return hint == "string" ? `{name: "${this.name}"}` : this.money;
-	}
+    [Symbol.toPrimitive](hint) {
+        console.log(`hint: ${hint}`);
+        return hint == "string" ? `{name: "${this.name}"}` : this.money;
+    },
 };
 
 console.log(user); // hint: string -> {name: "Ruben"}
@@ -316,16 +316,16 @@ valueOf() -> the object itself
 */
 
 user = {
-	name: "Ruben",
-	money: 1000,
+    name: "Ruben",
+    money: 1000,
 
-	toString() {
-		return `{name: "${this.name}"}`;
-	},
+    toString() {
+        return `{name: "${this.name}"}`;
+    },
 
-	valueOf() {
-		return this.money
-	}
+    valueOf() {
+        return this.money;
+    },
 };
 
 console.log(user); // toString -> {name: "Ruben"}

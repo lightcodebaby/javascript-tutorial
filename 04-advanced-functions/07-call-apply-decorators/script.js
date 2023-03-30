@@ -102,12 +102,12 @@ console.log(worker.slow(3, 5)); // From cache
 
 // func.apply
 
-let wrapper = function() {
-	return func.apply(this, arguments);
-}
+let wrapper = function () {
+    return func.apply(this, arguments);
+};
 
 // Method borrowing
 
 function hash(args) {
-	return [].join.call(arguments);
+    return [].join.call(arguments);
 }

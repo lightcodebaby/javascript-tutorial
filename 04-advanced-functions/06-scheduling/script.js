@@ -28,19 +28,20 @@ setTimeout(() => {
 // Another way to run something regularly
 
 timerId = setTimeout(function tick() {
-	console.log("tick");
-	timerId = setTimeout(tick, 2000);
+    console.log("tick");
+    timerId = setTimeout(tick, 2000);
 }, 2000);
 
 let delay = 5000;
 
-timerId = setTimeout(function() {
-	// ...send request...
-	if(true) { // request failed due to server overload
-		delay += 2;
-	}
+timerId = setTimeout(function () {
+    // ...send request...
+    if (true) {
+        // request failed due to server overload
+        delay += 2;
+    }
 
-	timerId = setTimeout(request, delay);
+    timerId = setTimeout(request, delay);
 }, delay);
 
 // Right after the current script is complete
