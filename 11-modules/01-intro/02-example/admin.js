@@ -1,3 +1,3 @@
 export let admin = {
-	name: "Ruben"
-  };
+    name: 'Ruben',
+};

@@ -1,2 +1,2 @@
-import {config} from './admin.js';
-config.user = "Ruben";
+import { config } from './admin.js';
+config.user = 'Ruben';

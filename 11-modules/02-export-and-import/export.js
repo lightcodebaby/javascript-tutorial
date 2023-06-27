@@ -1,16 +1,16 @@
-"use strict";
+'use strict';
 
 // export an array
 export let months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
 ];
 
 // export a constant
